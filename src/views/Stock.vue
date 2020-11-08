@@ -58,17 +58,18 @@
             </v-card>
           </v-dialog>
 
-          <v-text-field v-model="newProduct.name" label="nom produit"></v-text-field>
+          <v-text-field outlined="" dense v-model="newProduct.name" label="nom produit"></v-text-field>
           <v-row>
             <v-col sm="12" md="6">
-              <v-text-field v-model.number="newProduct.price" label="price" type="number"></v-text-field>
+              <v-text-field outlined="" dense v-model.number="newProduct.price" label="price" type="number"></v-text-field>
             </v-col>
             <v-col sm="12" md="6">
               <v-overflow-btn
-                class="my-2"
+                class="my-0"
                 :items="currencies"
                 label="Monnaie"
                 flat
+                outlined=""
                 v-model="newProduct.monnaie"
                 item-value="text"
                 dense
@@ -78,14 +79,13 @@
           <v-textarea
             full-width
             name="input-7-1"
+            outlined=""
+            dense
             label="Description"
             v-model="newProduct.details"
             hint="Une description de 255 (c)"
           ></v-textarea>
           <v-row>
-            <v-col>
-              <v-btn class="pink--text">Annuler</v-btn>
-            </v-col>
             <v-col>
               <v-btn @click.prevent="addP()" color="pink" class="white--text">Creer produit</v-btn>
             </v-col>

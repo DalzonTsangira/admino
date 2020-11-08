@@ -1,7 +1,7 @@
 <template>
   <v-app>
     
-    <Navbar/>
+    <Navbar :drawer="drawer"/>
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -18,15 +18,18 @@ export default {
     Navbar
   },
   methods:{
-    ...mapActions(['getImages','getProducts']),
+    ...mapActions(['getImages','getProducts','getVentes',"getUsers"]),
   },
 
   data: () => ({
-    //
+    drawer: true,
   }),
   mounted(){
     this.getImages();
     this.getProducts();
+    this.getVentes();
+    this.getUsers();
+
   }
 };
 </script>

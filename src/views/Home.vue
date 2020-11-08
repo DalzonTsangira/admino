@@ -10,11 +10,11 @@
       </v-flex>
       <v-flex class="md3">
         <v-card min-height="12vh" color="purple">
-          <v-row class="ml-14 pt-5 white--text">
-            <v-flex class="md3"><span class="headline">55</span></v-flex>
-            <v-flex class="md3">users</v-flex>
+          <v-row class="ml-4 pt-4 white--text">
+            <v-flex class="md3 align-self-center"><span class="headline ">{{getTotalUser}}</span></v-flex>
+            <v-flex class="md3 align-self-center">users</v-flex>
             <v-spacer></v-spacer>
-            <v-flex class="md3  mr-2">
+            <v-flex class="md3  mr-4 align-self-center">
               <v-avatar color="white" class="mr-2">
                 <v-icon color="black">people</v-icon>
               </v-avatar></v-flex>
@@ -22,12 +22,12 @@
            </v-card>
       </v-flex>
       <v-flex class="md3 ml-4">
-        <v-card min-height="12vh" color="blue"> 
-          <v-row class="ml-14 pt-5 white--text">
-            <v-flex class="md3"><span class="headline">340</span> </v-flex>
-            <v-flex class="md3">ventes</v-flex>
+        <v-card min-height="12vh" color="blue" > 
+          <v-row class="ml-4  pt-4 white--text " >
+            <v-flex class="md3 align-self-center" ><span class="headline">{{getTotalVente}}</span> </v-flex>
+            <v-flex class="md3 align-self-center">ventes</v-flex>
             <v-spacer></v-spacer>
-            <v-flex class="md3 mr-2">
+            <v-flex class="md3 mr-4 align-self-center">
               <v-avatar color="white" class="mr-2">
                   <v-icon color="black">shopping_basket</v-icon>
               </v-avatar></v-flex>
@@ -36,11 +36,11 @@
       </v-flex>
       <v-flex class="md3 ml-4">
         <v-card min-height="12vh" color="black">
-          <v-row class="ml-14 pt-5 white--text">
-            <v-flex class="md3"><span class="headline">{{getTotalProd}}</span></v-flex>
-            <v-flex class="md3">produits en stock</v-flex>
+          <v-row class="ml-4 pt-4 white--text">
+            <v-flex class="md3 align-self-center"><span class="headline">{{getTotalProd}}</span></v-flex>
+            <v-flex class="md3 align-self-center"> stock</v-flex>
             <v-spacer></v-spacer>
-            <v-flex class="md3  mr-2" >
+            <v-flex class="md3  mr-4 align-self-center" >
               <v-avatar color="white" class="">
               <v-icon color="black">store</v-icon>
               </v-avatar></v-flex>
@@ -116,7 +116,7 @@ export default {
       }
     },
     computed:{
-      ...mapGetters(['getTotalProd'])
+      ...mapGetters(['getTotalProd','getTotalUser','getTotalVente'])
 
     }
 };

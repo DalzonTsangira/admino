@@ -2,9 +2,12 @@
   <nav>
     <v-navigation-drawer
       v-model="drawer"
+      
+      permanent
       app
       mini-variant
       mini-variant-width="100"
+      
     >
       <v-card class="" min-height="100vh" color="pink">
         <v-list nav dense class="mb-2 pt-4 pl-6">
@@ -34,14 +37,15 @@
 <script>
 export default {
   name: "Navbar",
+  props:{
+    drawer:Boolean
+  },
   data() {
     return {
-      drawer: true,
       items: [
         { title: "Home", icon: "dashboard" ,route:"/"},
         { title: "My Account", icon: "store" ,route:"/store"},
         { title: "Ventes", icon: "shopping_basket",route:"ventes" },
-        
       ],
       mini: true,
     };
